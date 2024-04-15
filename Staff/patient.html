@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Login</title>
+
+    <link rel="icon" type="image/x-icon" href="Icon 3.png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00A36C; /* Changed background color to dark blue */
+            color: #fff; /* Changed text color to white */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto; /* Adjusted margin */
+            padding: 20px;
+            background-color: #008080; /* Changed container background color to a shade of blue */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Added logo styles */
+        #logo {
+            display: block;
+            margin: 0 auto 20px; /* Center the logo and add space below */
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff; /* Changed heading color to white */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #0047AB;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0047AB;
+        }
+
+        .login-form {
+            padding: 20px;
+        }
+
+        .signup-link {
+            text-align: center;
+            color: #fff; /* Changed link text color to white */
+        }
+
+        .signup-link a {
+            color: #007bff; /* Changed color to blue */
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <center><a href="file:///C:/Users/Dell/Desktop/STUDY/AA%20SEM%205/Project%20A%20ICT30017/Website/homepage.html"
+                id="logo"><img src="Logo 3.png" alt="Website Logo"></center></a> <!-- Added logo -->
+        <h2>Patient Login</h2>
+        <form class="login-form" id="login-form" action="#">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Sign In" id="signin-btn">
+        </form>
+        <div class="signup-link">
+            <p>Don't have an account? <a href="file:///C:/Users/Dell/Desktop/STUDY/AA%20SEM%205/Project%20A%20ICT30017/Website/Staff/patientform.html" style="color: blue;">Sign Up</a></p>
+            <!-- Adjusted color -->
+        </div>
+    </div>
+    <footer>
+        <p>© VEHA, 2024. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginForm = document.getElementById('login-form');
+            loginForm.action = 'javascript:patientLogin();'; // Change form action for patient
+        });
+
+        function patientLogin() {
+            const username = document.querySelector('input[name="username"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+            
+            if (username === 'hellop' && password === '1245') {
+                window.location.href = 'file:///C:/Users/Dell/Desktop/STUDY/AA%20SEM%205/Project%20A%20ICT30017/Website/Staff/Paitenthome/patienthome.html'; // Redirect to patient home page
+            } else {
+                alert('Invalid username or password for patient.');
+            }
+        }
+    </script>
+</body>
+
+</html>

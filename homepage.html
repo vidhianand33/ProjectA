@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEAH System</title>
+
+    <link rel="icon" type="image/x-icon" href="Icon 3.png">
+
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            /* Combined blue and green */
+            display: flex;
+            flex-direction: column;
+        }
+
+        #container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #logo {
+            max-width: 200px; /* Decreased logo size */
+            margin-bottom: 20px;
+        }
+
+        #name {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        #info {
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .button-container {
+            display: flex; /* Align buttons in one line */
+            justify-content: center; /* Center align buttons */
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 20px 40px; /* Adjusted button padding */
+            font-size: 18px; /* Decreased button font size */
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .staff,
+        .patient {
+            display: block;
+            background-color: #34495e;
+            /* Dark blue for staff */
+            color: #fff;
+            width: 150px;
+            /* Button width */
+            text-align: center;
+        }
+
+        .patient {
+            background-color: #27ae60;
+            /* Dark green for patient */
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .slideshow-container {
+            max-width: 600px; /* Adjusted slideshow max-width */
+            margin: auto;
+            position: relative;
+            overflow: hidden; /* Hide overflow for caption positioning */
+        }
+
+        .mySlides {
+            display: none;
+            position: relative; /* Position container for absolute caption positioning */
+        }
+
+        .mySlides img {
+            width: 100%; /* Images now uniformly sized */
+            height: 300px; /* Set a fixed height for the images */
+            object-fit: cover; /* Maintain aspect ratio and cover entire container */
+            display: block;
+            margin: auto; /* Center image */
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 0;
+            right: -150%; /* Move captions to the right outside of the images */
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            transition: right 0.3s ease; /* Add transition for smooth animation */
+        }
+
+        .mySlides:hover .text {
+            right: 0; /* Move captions back to original position on hover */
+        }
+
+        .text-box {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            max-width: 1800px; /* Set max-width for message box */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <img id="logo" src="logo 3.png" alt="Logo">
+        <div id="name">Versatile Employee Asset Handling System</div>
+        <div class="text-box">
+            <p>Revolutionize aged care management with our specialized software system. Seamlessly coordinate resident
+                needs, streamline administrative tasks, and ensure regulatory compliance. From medication management to
+                staff scheduling, our intuitive platform empowers caregivers to deliver exceptional care while
+                optimizing efficiency. Discover the future of aged care management today.</p>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="doctor.jpeg">
+                <div class="text">Doctor</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="event.jpg">
+                <div class="text">Event</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="family.png">
+                <div class="text">Family</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="nurse.jpg">
+                <div class="text">Nurse</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="wat.jpg">
+                <div class="text">We Are Together</div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="button staff" onclick="location.href='Staff/stafflogin.html';">Staff</button>
+            <button class="button patient" onclick="location.href='Staff/patient.html';">Patient</button>
+        </div>
+    </div>
+    <footer>
+        <p>© VEHA, 2024. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+    </script>
+</body>
+
+</html>

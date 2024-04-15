@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Sign Up Form</title>
+
+    <link rel="icon" type="image/x-icon" href="Icon 3.png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00A36C;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Center horizontally */
+        }
+
+        #logo {
+            display: block;
+            margin-right: 190px;
+            max-width: 150px;
+            /* Adjusted logo size */
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select,
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+            /* Adjusted height for description area */
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            /* Button now takes full width */
+            padding: 15px;
+            /* Increased padding */
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+            /* Increased font size */
+            margin-top: 20px;
+            /* Added margin to the top */
+        }
+
+        .required::after {
+            content: "*";
+            /* Added asterisk */
+            color: red;
+            /* Changed color to red */
+        }
+
+        .experience-input {
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <center><a href="file:///C:/Users/Dell/Desktop/STUDY/AA%20SEM%205/Project%20A%20ICT30017/Website/homepage.html" id="logo"><img src="Logo 3.png" alt="Website Logo"></center></a>
+
+    <div class="container">
+
+        <h2>Patient Sign Up Form</h2>
+
+        <form action="file:///C:/Users/Dell/Desktop/STUDY/AA%20SEM%205/Project%20A%20ICT30017/Website/thankyou.html" method="post" enctype="multipart/form-data">
+
+            <label for="title">Title:</label>
+            <select id="title" name="title" required>
+                <option value="">Select Title</option>
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Miss">Miss</option>
+                <option value="Dr.">Dr.</option>
+            </select>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="middleName">Middle Name:</label>
+            <input type="text" id="middleName" name="middleName">
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="dob">Date of birth (day/month/year):</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="medicalCondition">Medical Condition:</label>
+            <input type="file" id="medicalCondition" name="medicalCondition[]" multiple required>
+            <textarea id="conditionDescription" name="conditionDescription"
+                placeholder="Description of Medical Condition"></textarea>
+
+                <label for="prevOperations">Previous Operations:</label>
+                <div class="experience-input">
+                    <input type="file" id="prevOperations" name="prevOperations[]" multiple>
+                    <textarea id="operationsDescription" name="operationsDescription"
+                        placeholder="Description of Previous Operations"></textarea>
+                </div>
+
+            <label for="homeAddress">Home Address:</label>
+            <textarea id="homeAddress" name="homeAddress" placeholder="Enter Home Address"></textarea>
+
+            <label for="emergencyContact1">Emergency Contact 1:</label>
+            <select id="emergencyContact1" name="emergencyContact1" required>
+                <option value="">Select Contact</option>
+                <option value="sibling">Sibling</option>
+                <option value="relative">Relative</option>
+                <option value="colleague">Colleague</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="emergencyContact1Name" name="emergencyContact1Name" placeholder="Enter Name" required>
+            <input type="text" id="emergencyContact1Phone" name="emergencyContact1Phone" placeholder="Enter Phone Number" required>
+
+            <label for="emergencyContact2">Emergency Contact 2:</label>
+            <select id="emergencyContact2" name="emergencyContact2" required>
+                <option value="">Select Contact</option>
+                <option value="sibling">Sibling</option>
+                <option value="relative">Relative</option>
+                <option value="colleague">Colleague</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="emergencyContact2Name" name="emergencyContact2Name" placeholder="Enter Name" required>
+            <input type="text" id="emergencyContact2Phone" name="emergencyContact2Phone" placeholder="Enter Phone Number" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Set password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
